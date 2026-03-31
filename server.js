@@ -30,7 +30,7 @@ app.get('/health', (req, res) => {
 });
 
 // Single Page App support: redirect all other requests to index.html
-app.get('*', (req, res) => {
+app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname, 'frontend/dist', 'index.html'));
 });
 
