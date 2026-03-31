@@ -1,31 +1,56 @@
 import db from '../database/db.js';
 
-export const saveMessage = (sessionId, role, text) => {
+export const saveMessage = async (sessionId, role, text) => {
   // Ensure session exists
-  const session = db.prepare('SELECT id FROM sessions WHERE id = ?').get(sessionId);
-  if (!session) {
-    db.prepare('INSERT INTO sessions (id, title) VALUES (?, ?)').run(sessionId, text.substring(0, 30) + '...');
+  const sessionRes = await db.execute({
+    sql: 'SELECT id FROM sessions WHERE id = ?',
+    args: [sessionId]
+  });
+  
+  if (sessionRes.rows.length === 0) {
+    await db.execute({
+      sql: 'INSERT INTO sessions (id, title) VALUES (?, ?)',
+      args: [sessionId, text.substring(0, 30) + '...']
+    });
   } else {
-    db.prepare('UPDATE sessions SET updated_at = CURRENT_TIMESTAMP WHERE id = ?').run(sessionId);
+    await db.execute({
+      sql: 'UPDATE sessions SET updated_at = CURRENT_TIMESTAMP WHERE id = ?',
+      args: [sessionId]
+    });
   }
 
   // Insert message
-  db.prepare('INSERT INTO messages (session_id, role, text) VALUES (?, ?, ?)').run(sessionId, role, text);
+  await db.execute({
+    sql: 'INSERT INTO messages (session_id, role, text) VALUES (?, ?, ?)',
+    args: [sessionId, role, text]
+  });
 };
 
-export const getSessionHistory = (sessionId) => {
-  return db.prepare('SELECT role, text, timestamp FROM messages WHERE session_id = ? ORDER BY timestamp ASC').all(sessionId);
+export const getSessionHistory = async (sessionId) => {
+  const res = await db.execute({
+    sql: 'SELECT role, text, timestamp FROM messages WHERE session_id = ? ORDER BY timestamp ASC',
+    args: [sessionId]
+  });
+  return res.rows;
 };
 
-export const getAllSessions = () => {
-  return db.prepare('SELECT * FROM sessions ORDER BY updated_at DESC').all();
+export const getAllSessions = async () => {
+  const res = await db.execute('SELECT * FROM sessions ORDER BY updated_at DESC');
+  return res.rows;
 };
 
-export const deleteSession = (sessionId) => {
-  db.prepare('DELETE FROM messages WHERE session_id = ?').run(sessionId);
-  db.prepare('DELETE FROM sessions WHERE id = ?').run(sessionId);
+export const deleteSession = async (sessionId) => {
+  await db.execute({
+    sql: 'DELETE FROM messages WHERE session_id = ?',
+    args: [sessionId]
+  });
+  await db.execute({
+    sql: 'DELETE FROM sessions WHERE id = ?',
+    args: [sessionId]
+  });
 };
-export const deleteAllSessions = () => {
-  db.prepare('DELETE FROM messages').run();
-  db.prepare('DELETE FROM sessions').run();
+
+export const deleteAllSessions = async () => {
+  await db.execute('DELETE FROM messages');
+  await db.execute('DELETE FROM sessions');
 };

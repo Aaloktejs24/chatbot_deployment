@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = '/api/chat';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '/api/chat';
 
 export const sendMessageToBot = async (message, sessionId = null) => {
     try {

@@ -159,3 +159,32 @@ aaloktejas@Aaloks-MacBook-Air chatbot-project %
 - **Real-time Analytics**: Add a dashboard for the Admin to see top keywords and fallback rates.
 - **Voice Typing**: Integrate Web Speech API for hands-free interaction.
 - **Enhanced Formatting**: Support for Markdown and code snippets in the bot's responses.
+
+---
+
+##  Deploying to Render (with Turso Cloud SQLite)
+
+To keep your chat history persistent on Render's free tier without paying for a disk, we use **Turso**.
+
+### 1. Setup Turso Database
+1. Go to [Turso.tech](https://turso.tech/) and create a free account.
+2. Create a new database (e.g., `chatbot-db`).
+3. Get your **Database URL** (`libsql://...`) and **Auth Token**.
+
+### 2. Backend (Web Service)
+- **Repo**: Connect your GitHub repository.
+- **Root Directory**: `backend`
+- **Build Command**: `npm install`
+- **Start Command**: `node server.js`
+- **Environment Variables**:
+  - `PORT`: `5001`
+  - `TURSO_DATABASE_URL`: Your Turso DB URL
+  - `TURSO_AUTH_TOKEN`: Your Turso Auth Token
+
+### 3. Frontend (Static Site)
+- **Repo**: Connect your GitHub repository.
+- **Root Directory**: `frontend`
+- **Build Command**: `npm install && npm run build`
+- **Publish Directory**: `dist`
+- **Environment Variables**:
+  - `VITE_API_BASE_URL`: Your Backend Render URL (e.g., `https://chatbot-backend.onrender.com/api/chat`)
