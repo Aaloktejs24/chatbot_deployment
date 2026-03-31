@@ -12,14 +12,24 @@ The easiest way to run the entire project is using **Docker**.
 - Docker and Docker Compose installed.
 
 ### 2. Launching the App
-Run the following command in the root directory:
+The easy way (Auto-install + Start):
+```bash
+./start.sh
+```
+
+The manual way:
 ```bash
 docker-compose up --build -d
 ```
 - **Frontend**: Accessible at `http://localhost:3000`
 - **Backend API**: Accessible at `http://localhost:5001`
 
-### 3. Running Automated Tests
+### 3. Stopping the App
+```bash
+./stop.sh
+```
+
+### 4. Running Automated Tests
 To verify the engine's integrity (Intent detection & Filters), run:
 ```bash
 docker-compose exec backend npm test
