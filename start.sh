@@ -1,12 +1,10 @@
 #!/bin/bash
 
-echo "Installing backend packages..."
-cd backend && npm install && cd ..
+echo "📦 Installing all dependencies..."
+npm run setup
 
-echo "Installing frontend packages..."
-cd frontend && npm install && cd ..
+echo "🏗 Building frontend..."
+npm run build
 
-echo "Starting app with Docker..."
-docker-compose up --build -d
-
-echo "Done! Open http://localhost:3000"
+echo "🚀 Starting server..."
+npm start

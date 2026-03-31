@@ -1,10 +1,13 @@
 {
-  "name": "chatbot-backend",
+  "name": "chatbot-fullstack",
   "version": "1.0.0",
   "type": "module",
   "main": "server.js",
   "scripts": {
+    "setup": "npm install && cd frontend && npm install",
+    "build": "cd frontend && npm run build",
     "start": "node server.js",
+    "dev": "node server.js",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "dependencies": {
