@@ -1,0 +1,18 @@
+{
+  "what is artificial intelligence?": {
+    "answer": "Artificial Intelligence (AI) is the simulation of human intelligence processes by machines, especially computer systems.",
+    "source": "Enlight AI Research Paper"
+  },
+  "what is a chatbot?": {
+    "answer": "A chatbot is a software application used to conduct an on-line chat conversation via text or text-to-speech, in lieu of providing direct contact with a live human agent.",
+    "source": "Computing Encyclopedia v2"
+  },
+  "who are you?": {
+    "answer": "I am your personal AI companion, built with love as part of an assignment for the Enlight AI internship. I live entirely on your machine!",
+    "source": "Bot Identity Matrix"
+  },
+  "how do you work?": {
+    "answer": "I use local intent-matching and tokenization to understand you. I don't need the cloud—everything I learn from our chat stays safe with you.",
+    "source": "Privacy Architecture Guide"
+  }
+}

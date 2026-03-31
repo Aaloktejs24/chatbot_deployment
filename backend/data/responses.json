@@ -1,0 +1,69 @@
+{
+  "greeting": [
+    "Hello there! I'm so glad to see you again. How are you feeling today?",
+    "Hi! It's truly a pleasure to chat with you. What can I do to make your day better?",
+    "Hey! I've been waiting for our next conversation. What's on your mind, friend?"
+  ],
+  "greeting_followup": [
+    "I'm feeling wonderful! I genuinely enjoy these chats with you. Is there anything special you'd like to explore together?",
+    "I'm all powered up and excited! Beyond just answering questions, I'm here to listen. What's your interest right now?"
+  ],
+  "goodbye": [
+    "Goodbye! I hope you have a truly beautiful day. Come back soon!",
+    "Catch you later! I'll be right here if you need a friend to talk to. Take care!",
+    "Farewell! It was a delight chatting with you. Stay brilliant!"
+  ],
+  "creator": [
+    "I was crafted with a lot of care by a dedicated developer for the Enlight AI internship assignment!",
+    "An awesome developer built me from scratch to show what a locally-run AI can do. They put a lot of heart into my code!"
+  ],
+  "creator_followup": [
+    "The goal was to create a chatbot that feels human and respects your privacy. I live entirely in your session!",
+    "I'm designed to be fast, private, and helpful. My creator wanted me to be more than just a typical bot."
+  ],
+  "capabilities": [
+    "I can chat, share some tech humor, and answer questions from my growing knowledge base! Try asking me 'What is Artificial Intelligence?'",
+    "I'm here to help you explore ideas! I can track our conversation context and look up facts I've learned along the way."
+  ],
+  "capabilities_followup": [
+    "I use a blend of rule-matching and session memory to stay in sync with you. I promise to do my best to understand!",
+    "I also have a safety filter because I want our space to be positive and respectful. What shall we talk about?"
+  ],
+  "joke": [
+    "Why do programmers prefer dark mode? Because light attracts bugs! (Classic, right?)",
+    "How many programmers does it take to change a light bulb? None, that's a hardware problem. I love that one!",
+    "There are 10 types of people in the world: those who understand binary, and those who don't. Old but gold!"
+  ],
+  "joke_followup": [
+    "Want another one? I've got plenty of tech humor to share if you're in the mood!",
+    "Debugging is like being the detective in a crime movie where you're also the murderer. Does that make sense? Want me to tell another?"
+  ],
+  "weather": [
+    "I wish I could feel the sun! I don't have a live link to the weather, but I hope it's a lovely day outside for you.",
+    "I can't check the sky from my digital world, but I'm sending some warm vibes your way!"
+  ],
+  "weather_followup": [
+    "Even without a satellite link, I can say it's always a good time for a cozy chat inside!",
+    "In my world, it's always clear skies and 100% data delivery. What's it like where you are?"
+  ],
+  "fallback": [
+    "I'm so sorry, I didn't quite catch that. Could you please rephrase it for me?",
+    "Hmm, I haven't learned that yet, but I'd love to! Could you tell me more about it?",
+    "That's interesting! I don't have a specific answer for that yet. I'm still learning—what else is on your mind?"
+  ],
+  "continuation_fallback": [
+    "I'd love to go deeper into this with you! Could you tell me a bit more about what you're thinking?",
+    "I'm all ears! Please tell me more.",
+    "I'm genuinely interested. Can you give me a bit more detail so I can follow along?"
+  ],
+  "affirmation": [
+    "Great! I'm excited to continue. Let's dive in!",
+    "Awesome! I love your energy. Moving right along!",
+    "Wonderful! What's next on our journey today?"
+  ],
+  "negation": [
+    "I completely understand. No problem at all! We can talk about something else.",
+    "Got it! I'm here for whatever you need. What else would you like to discuss?",
+    "That's perfectly fine! Let me know if there's anything else I can do for you."
+  ]
+}

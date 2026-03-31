@@ -1,0 +1,42 @@
+[
+  {
+    "intent": "greeting",
+    "patterns": ["hello", "hi", "hey", "greetings", "good morning", "good evening"]
+  },
+  {
+    "intent": "goodbye",
+    "patterns": ["bye", "goodbye", "see you", "later", "cya"]
+  },
+  {
+    "intent": "creator",
+    "patterns": ["who made you", "who created you", "your creator", "who is your boss"]
+  },
+  {
+    "intent": "capabilities",
+    "patterns": ["what can you do", "help", "features", "how can you help"]
+  },
+  {
+    "intent": "knowledge_query",
+    "patterns": ["what is", "tell me about", "who is", "explain", "how does"]
+  },
+  {
+    "intent": "joke",
+    "patterns": ["tell me a joke", "make me laugh", "joke", "funny"]
+  },
+  {
+    "intent": "weather",
+    "patterns": ["weather", "is it raining", "temperature", "forecast"]
+  },
+  {
+    "intent": "affirmation",
+    "patterns": ["yes", "yeah", "yep", "sure", "ok", "okay"]
+  },
+  {
+    "intent": "negation",
+    "patterns": ["no", "nope", "nah", "never"]
+  },
+  {
+    "intent": "continuation",
+    "patterns": ["tell me more", "more", "explain further", "why", "and then", "go on", "continue", "elaborate", "another one", "one more"]
+  }
+]

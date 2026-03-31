@@ -1,0 +1,77 @@
+aaloktejas@Aaloks-MacBook-Air chatbot-project % tree
+.
+├── README.md
+├── backend
+│   ├── Dockerfile
+│   ├── controllers
+│   │   └── chatController.js
+│   ├── data
+│   │   ├── chatbot.db
+│   │   ├── intents.json
+│   │   ├── knowledge.json
+│   │   └── responses.json
+│   ├── database
+│   │   └── db.js
+│   ├── node_modules
+│   │   ├── @babel
+│   │   ├── @bcoe
+│   │   ├── @isaacs
+│   │   ├── @istanbuljs
+│   │   ├── @jest
+│   │   ├── @jridgewell
+│   │   ├── @pkgjs
+│   │   ├── @pkgr
+│   │   ├── @sinclair
+│   │   ├── @sinonjs
+│   │   ├── @types
+│   │   ├── @ungap
+│   │   └── @unrs
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── routes
+│   │   └── chatRoutes.js
+│   ├── server.js
+│   ├── services
+│   │   ├── contextService.js
+│   │   ├── dbService.js
+│   │   ├── filterService.js
+│   │   ├── intentService.js
+│   │   └── responseService.js
+│   └── tests
+│       ├── filterService.test.js
+│       └── intentService.test.js
+├── docker-compose.yml
+└── frontend
+    ├── Dockerfile
+    ├── README.md
+    ├── eslint.config.js
+    ├── index.html
+    ├── nginx.conf
+    ├── package-lock.json
+    ├── package.json
+    ├── public
+    │   └── icons.svg
+    ├── src
+    │   ├── App.css
+    │   ├── App.jsx
+    │   ├── assets
+    │   │   ├── hero.png
+    │   │   ├── react.svg
+    │   │   └── vite.svg
+    │   ├── components
+    │   │   ├── ChatBox.jsx
+    │   │   ├── ConfirmModal.css
+    │   │   ├── ConfirmModal.jsx
+    │   │   ├── InputBar.jsx
+    │   │   ├── MessageBubble.jsx
+    │   │   ├── Sidebar.css
+    │   │   └── Sidebar.jsx
+    │   ├── index.css
+    │   ├── main.jsx
+    │   ├── services
+    │   │   └── api.js
+    │   └── styles
+    │       └── chat.css
+    └── vite.config.js
+
+29 directories, 45 files
